@@ -45,6 +45,9 @@ class ReadData:
         self.voice: np.ndarray
         self.voice = np.array([self.voice])
 
+    def output(self):
+        return self.voice
+
 
 if __name__ == '__main__':
     read = ReadData()
