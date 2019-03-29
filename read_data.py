@@ -6,12 +6,15 @@ import matplotlib.pyplot as plt
 
 class ReadData:
     def __init__(self, fs=44100, channels=1):
+        # channels is the Number of microphones
         self.fs = fs
         self.ch = channels
         self.duration = 5  # second
         self.voice = np.array([])
 
     def recording(self, duration=5):
+        # read data from microphone
+        # duration is the length of time you want to record
         self.duration = duration
         self.voice = sd.rec(self.duration * self.fs, samplerate=self.fs, channels=self.ch, dtype='float64')
         sd.wait()
