@@ -1,5 +1,6 @@
 # here we want to read microphone or voice file
 import sounddevice as sd
+from scipy.io import wavfile
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -9,6 +10,7 @@ class ReadData:
         # channels is the Number of microphones
         self.fs = fs
         self.ch = channels
+        self.name = 'out_put'
         self.duration = 5  # second
         self.voice = np.array([])
 
@@ -18,22 +20,36 @@ class ReadData:
         self.duration = duration
         self.voice = sd.rec(self.duration * self.fs, samplerate=self.fs, channels=self.ch, dtype='float64')
         sd.wait()
+        self.voice = self.voice.T.copy()
 
     def play(self):
-        sd.play(self.voice, self.fs)
+        sd.play(self.voice.T.copy(), self.fs)
         sd.wait()
 
     def show(self):
-        self.voice = self.voice.T.copy()
         for i in range(len(self.voice)):
             plt.plot(np.arange(len(self.voice[i])), self.voice[i]+i*5)
         plt.show()
+
+    def save_data(self, name='out_put'):
+        # be careful last file will delete
+        self.name = name
+        for i in range(len(self.voice)):
+            wavfile.write(self.name+'_'+str(i)+'.wav', rate=len(self.voice[0]), data=self.voice[i])
+
+    def read_wave(self, name='out_put_0.wav'):
+        self.name = name
+        _, self.voice = wavfile.read(self.name)
+        self.voice: np.ndarray
+        self.voice = np.array([self.voice])
 
 
 if __name__ == '__main__':
     read = ReadData()
     print('Recording')
-    read.recording()
+    read.read_wave()
+    # read.recording()
     print('Play')
     read.play()
     read.show()
+    read.save_data()
