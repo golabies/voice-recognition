@@ -1,6 +1,7 @@
 # here we want to read microphone or voice file
 import sounddevice as sd
 from scipy.io import wavfile
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -8,6 +9,7 @@ import matplotlib.pyplot as plt
 class ReadData:
     def __init__(self, fs=44100, channels=1):
         # channels is the Number of microphones
+        os.chdir('wave_files')
         self.fs = fs
         self.ch = channels
         self.name = 'out_put'
