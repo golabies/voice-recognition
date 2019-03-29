@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/read_data.py" line="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbebb25e-d504-4cba-a96d-db96e7597f1d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/read_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/read_data.py" afterDir="false" />
-    </list>
+    <list default="true" id="fbebb25e-d504-4cba-a96d-db96e7597f1d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/read_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+            <state>
+              <caret lean-forward="true" />
               <folding>
                 <element signature="e#48#72#0" expanded="true" />
               </folding>
@@ -135,7 +133,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.33224756" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -159,8 +157,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/read_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        <state>
+          <caret lean-forward="true" />
           <folding>
             <element signature="e#48#72#0" expanded="true" />
           </folding>
