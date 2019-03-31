@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 class ReadData:
     def __init__(self, fs=44100, channels=1):
         # channels is the Number of microphones
+        address = '/'.join(os.getcwd().split('/')[:-1])
+        os.chdir(address)
         os.chdir('wave_files')
         self.fs = fs
         self.ch = channels

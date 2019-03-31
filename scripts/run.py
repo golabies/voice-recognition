@@ -1,14 +1,14 @@
-import read_data
-import signal_fft
-import filters
+import scripts.read_data
+import scripts.signal_fft
+import scripts.filters
 
 if __name__ == '__main__':
-    data = read_data.ReadData()
+    data = scripts.read_data.ReadData()
     data.read_wave()
     new_signal, fs = data.output()
-    fill = filters.Filters(new_signal[0])
+    fill = scripts.filters.Filters(new_signal[0])
     new_signal = fill.smooth(149)
     data.show()
-    MF = signal_fft.MyFt(new_signal, fs)
+    MF = scripts.signal_fft.MyFt(new_signal, fs)
     MF.my_ft()
     MF.show()
