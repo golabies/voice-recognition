@@ -46,7 +46,7 @@ class ReadData:
         self.voice = np.array([self.voice])
 
     def output(self):
-        return self.voice
+        return self.voice, self.fs
 
 
 if __name__ == '__main__':
