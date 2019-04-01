@@ -1,7 +1,7 @@
 import scripts.read_data
 import scripts.signal_fft
 import scripts.filters
-import cluster
+import scripts.cluster
 
 if __name__ == '__main__':
     data = scripts.read_data.ReadData()
@@ -16,7 +16,7 @@ if __name__ == '__main__':
     # fill.show(fill.smooth, 149)
     new_signal_1 = fill.differences(new_signal)
     fill.show(fill.differences, new_signal)
-    # cls = cluster.Cluster(new_signal_1)
+    # cls = scripts.cluster.Cluster(new_signal_1)
     # cls.clustering()
     # cls.show()
     MF = scripts.signal_fft.MyFt(new_signal_1, fs)
