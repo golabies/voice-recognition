@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 class Filters:
@@ -11,3 +12,10 @@ class Filters:
         start = np.cumsum(self.sig[:wsz - 1])[::2] / r
         stop = (np.cumsum(self.sig[:-wsz:-1])[::2] / r)[::-1]
         return np.concatenate((start, out0, stop))
+
+    @staticmethod
+    def show(func, *inputs):
+        x = func(*inputs)
+        y = np.arange(len(x))
+        plt.plot(y, x)
+        plt.show()
