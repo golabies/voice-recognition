@@ -22,3 +22,6 @@ if __name__ == '__main__':
     MF = scripts.signal_fft.MyFt(new_signal_1, fs)
     MF.my_ft()
     MF.show()
+    show_text = speech_to_text.to_text()
+    show_text.print_text()
+    print(show_text.out_put())
